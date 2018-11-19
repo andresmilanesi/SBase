@@ -27,6 +27,7 @@ before_script:
   - "seleniumbase install geckodriver"
   - "seleniumbase mkdir browser_tests"
 script:
+  - "pytest mercury_test"
   - "pytest browser_tests/boilerplates/boilerplate_test.py --headless --with-db_reporting"
   - "pytest examples/my_first_test.py --browser=chrome -s --headless --with-db_reporting"
   - "nosetests examples/boilerplates/boilerplate_test.py --browser=chrome --headless"
