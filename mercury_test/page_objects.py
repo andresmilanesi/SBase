@@ -1,5 +1,21 @@
 from seleniumbase import BaseCase
-from selenium import webdriver
+
+
+class pageAction(BaseCase):
+
+    def valid_login(self):
+        self.driver.get(pageLogin.base_url)
+        self.send_keys(pageLogin.user_field, 'mercury')
+        self.send_keys(pageLogin.pass_field, 'mercury')
+        self.click(pageLogin.submit_button)
+        pass
+
+    def invalid_login(self):
+        self.driver.get(pageLogin.base_url)
+        self.send_keys(pageLogin.user_field, 'invalid')
+        self.send_keys(pageLogin.pass_field, 'invalid')
+        self.click(pageLogin.submit_button)
+        pass
 
 
 class pageLogin(object):
@@ -11,15 +27,20 @@ class pageLogin(object):
 
 class pageReservation(object):
     passenger_dropdown = 'select[name="passCount"]'
+    round_trip_type_radio = 'input[value="roundtrip"]'
+    one_way_trip_radio= 'input[value="oneway"]'
+    from_dropdown = 'select[name="fromPort"]'
+    from_month_dropdown = 'select[name="fromMonth"]'
+    from_day_dropdown = 'select[name="fromDay"]'
+    to_dropdown = 'select[name="toPort"]'
+    to_month_dropdown = 'select[name="toMonth"]'
+    to_day_dropdown = 'select[name="toDay"]'
+    continue_button = 'input[name="findFlights"]'
+    economy_class_radio = 'input[value="Coach"]'
+    business_class_radio = 'input[value="Business"]'
+    first_class_radio = 'input[value="First"]'
+    airline_dropdown = 'select[name="airline"]'
 
 
-class actionLogin:
-
-    def __init__(self, myDriver):
-        self.driver = myDriver
-
-    def login(self, user_field, password):
-        self.driver.get(pageLogin.base_url)
-        self.driver.find_element_by_css_selector(pageLogin.user_field).send_keys(user_field)
-        self.driver.find_element_by_css_selector(pageLogin.pass_field).send_keys(password)
-        self.driver.find_element_by_css_selector(pageLogin.submit_button).click()
+class pageReservation2(object):
+    assert_result_page = 'from[name="results"]'
