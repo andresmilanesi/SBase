@@ -38,4 +38,5 @@ script:
 #after_script:
 #  - "sudo mysql -e 'DROP DATABASE test_db;'"
 notifications:
-  email: false
+  email:
+    - "andresmilanesi@gmail.com"

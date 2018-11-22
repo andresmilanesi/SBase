@@ -11,6 +11,7 @@ class loginTests(pageAction):
         self.valid_login()
         self.assert_element_present(pageReservation.passenger_dropdown)
 
+
 class reservationTests(pageAction):
 
     def test_book_a_flight(self):
