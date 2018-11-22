@@ -39,4 +39,4 @@ script:
 #  - "sudo mysql -e 'DROP DATABASE test_db;'"
 notifications:
   email:
-    - "andresmilanesi@gmail.com"
+    - andresmilanesi@gmail.com
