@@ -44,3 +44,9 @@ class pageReservation(object):
 
 class pageReservation2(object):
     assert_result_page = 'from[name="results"]'
+
+
+class api(object):
+    base_url_users = "https://reqres.in/api/users?"
+    base_url_user_not_found = "https://reqres.in/api/users/23"
+    params_status_200 = {'page': 2}
