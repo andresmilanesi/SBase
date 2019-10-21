@@ -60,7 +60,7 @@ setup(
         'unittest2',
         'selenium==3.141.0',
         'requests==2.20.0',  # Changing this may effect "urllib3"
-        'urllib3==1.24.1',  # Keep this lib in sync with "requests"
+        'urllib3==1.24.2',  # Keep this lib in sync with "requests"
         'pytest>=4.0.0',
         'pytest-cov>=2.6.0',
         'pytest-html>=1.19.0',
